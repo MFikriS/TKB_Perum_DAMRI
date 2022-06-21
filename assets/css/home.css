@@ -1,0 +1,14 @@
+body{
+	background-image:url('../gambar/home.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.card{
+    margin-left: 14rem;
+    float: none;
+	width: 30rem;
+	margin-top: 7rem; 
+}

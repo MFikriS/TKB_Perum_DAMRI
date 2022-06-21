@@ -35,7 +35,7 @@ class M_tiket extends CI_Model{
     }
 	
 	function update_tiket($idtiket,$asal,$tujuan,$tgl_jadwal,$jm_brngkt,$seat,$harga){
-        $hasil=$this->db->query("UPDATE tiket SET asal='$asal',tujuan='$tujuan',tgl_brngkt='$tgl_brngkt',jm_brngkt='$jm_brngkt',seat='$seat',harga='$harga' WHERE id_tiket='$idtiket'");
+        $hasil=$this->db->query("UPDATE tiket SET asal='$asal',tujuan='$tujuan',tgl_jadwal='$tgl_jadwal',jm_brngkt='$jm_brngkt',seat='$seat',harga='$harga' WHERE id_tiket='$idtiket'");
         return $hasil;
     }
 }

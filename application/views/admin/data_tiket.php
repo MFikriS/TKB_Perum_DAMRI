@@ -162,7 +162,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
  
                     <div class="form-group">
-                        <label class="control-label col-xs-3" >Harga</label>
+                        <label class="control-label col-xs-3" >Tujuan</label>
                         <div class="col-xs-9">
                             <input name="tujuan_edit" id="tujuan_edit" class="form-control" type="text" placeholder="Harga" style="width:335px;" required>
                         </div>

@@ -12,24 +12,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 	<div class="container">
 		<div class="row justify-content-start">
-		  <div class="card text-white bg-primary">
-		  <center><div class="card-header">Website Admin Perum DAMRI</div></center>
-		  <div class="card-body">
-			<center><h5 class="card-title">Login Admin</h5></center>
-			<form class="form-signin" action="<?php echo base_url('admin_login/validasi'); ?>" method="post">
-					<label for="email" style="padding-top:13px">&nbsp;Username</label>
-						<input type="text" id="email" name="email" class="form-control" placeholder="Masukkan username disini" required autofocus><br/>
-					<label for="password">Password</label>
-						<input type="password" id="password" name="password" class="form-control" placeholder="Masukkan password disini" required></br>
-				
-						<button type="button" class="btn btn-success btn-block">Login</button>
-					
-					<button type="button" class="btn btn-success btn-block">Panduan</button>&nbsp
-					<center><font size="4px" weight="bold">&copyMFikriS 2022</font></center>
-				</form>
+			<div class="card text-white bg-primary">
+			<center><div class="card-header">Website Admin Perum DAMRI</div></center>
+				<div class="card-body">
+					<center><h5 class="card-title">Login Admin</h5></center>
+					<form class="form-signin" action="<?php echo base_url('admin_login/validasi'); ?>" method="post">
+						<label for="email" style="padding-top:13px">&nbsp;Username</label>
+							<input type="text" id="email" name="email" class="form-control" placeholder="Masukkan username disini" required autofocus><br/>
+						<label for="password">Password</label>
+							<input type="password" id="password" name="password" class="form-control" placeholder="Masukkan password disini" required></br>
+							<button type="button" class="btn btn-success btn-block">Login</button>
+						<button type="button" class="btn btn-success btn-block">Panduan</button>&nbsp
+						<center><font size="4px" weight="bold">&copyMFikriS 2022</font></center>
+					</form>
+				</div>
+			</div>
 		</div>
-</div>
-</div>
 	</div>
 	
 	<!-- Javascript -->

@@ -6,8 +6,8 @@ class M_tiket extends CI_Model{
         return $hasil->result();
     }     
 	
-	function simpan_tiket($id_tiket,$asal,$tujuan,$tgl_brngkt,$jm_brngkt,$seat,$harga){
-        $hasil=$this->db->query("INSERT INTO tiket (id_tiket,asal,tujuan,tgl_brngkt,jm_brngkt,seat,harga)VALUES('$id_tiket','$asal','$tujuan','$tgl_brngkt','$jm_brngkt','$seat','$harga')");
+	function simpan_tiket($id_tiket,$asal,$tujuan,$tgl_jadwal,$jm_brngkt,$seat,$harga){
+        $hasil=$this->db->query("INSERT INTO tiket (id_tiket,asal,tujuan,tgl_jadwal,jm_brngkt,seat,harga)VALUES('$id_tiket','$asal','$tujuan','$tgl_jadwal','$jm_brngkt','$seat','$harga')");
         return $hasil;
     }
 	
@@ -24,7 +24,7 @@ class M_tiket extends CI_Model{
                     'id_tiket' => $data->id_tiket,
                     'asal' => $data->asal,
                     'tujuan' => $data->tujuan,
-                    'tgl_brngkt' => $data->tgl_brngkt,
+                    'tgl_jadwal' => $data->tgl_jadwal,
                     'jm_brngkt' => $data->jm_brngkt,
                     'seat' => $data->seat,
                     'harga' => $data->harga
@@ -34,7 +34,7 @@ class M_tiket extends CI_Model{
         return $hasil;
     }
 	
-	function update_tiket($idtiket,$asal,$tujuan,$tgl_brngkt,$jm_brngkt,$seat,$harga){
+	function update_tiket($idtiket,$asal,$tujuan,$tgl_jadwal,$jm_brngkt,$seat,$harga){
         $hasil=$this->db->query("UPDATE tiket SET asal='$asal',tujuan='$tujuan',tgl_brngkt='$tgl_brngkt',jm_brngkt='$jm_brngkt',seat='$seat',harga='$harga' WHERE id_tiket='$idtiket'");
         return $hasil;
     }

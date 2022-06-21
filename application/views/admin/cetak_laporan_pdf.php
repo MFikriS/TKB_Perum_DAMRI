@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<th>Id</th>
 									<th>Asal</th>
 									<th>Tujuan</th>
-									<th>Tanggal Berangkat</th>
+									<th>Tanggal Jadwal</th>
 									<th>Jam Berangkat</th>
 									<th>Seat</th>
 									<th>Harga Satuan</th>
@@ -88,7 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 '<td>'+data[i].id_tiket+'</td>'+
                                 '<td>'+data[i].asal+'</td>'+
                                 '<td>'+data[i].tujuan+'</td>'+
-                                '<td>'+data[i].tgl_brngkt+'</td>'+
+                                '<td>'+data[i].tgl_jadwal+'</td>'+
                                 '<td>'+data[i].jm_brngkt+'</td>'+
                                 '<td>'+data[i].seat+'</td>'+
                                 '<td>'+data[i].harga+'</td>'+

@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<th>Id</th>
 						<th>Asal</th>
 						<th>Tujuan</th>
-						<th>Tanggal Berangkat</th>
+						<th>Tanggal Jadwal</th>
 						<th>Jam Berangkat</th>
 						<th>Seat</th>
 						<th>Harga Satuan</th>
@@ -97,9 +97,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
 					
 					<div class="form-group">
-                        <label class="control-label col-xs-3" >Tanggal Berangkat</label>
+                        <label class="control-label col-xs-3" >Tanggal Jadwal</label>
                         <div class="col-xs-9">
-                            <input name="tgl_brngkt" id="tgl_brngkt" class="form-control" type="date" placeholder="Tanggal Berangkat" style="width:335px;" required>
+                            <input name="tgl_jadwal" id="tgl_jadwal" class="form-control" type="date" placeholder="Tanggal Jadwal" style="width:335px;" required>
                         </div>
                     </div>
 					
@@ -169,9 +169,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
 					
 					<div class="form-group">
-                        <label class="control-label col-xs-3" >Tanggal Berangkat</label>
+                        <label class="control-label col-xs-3" >Tanggal Jadwal</label>
                         <div class="col-xs-9">
-                            <input name="tgl_brngkt" id="tgl_brngkt_edit" class="form-control" type="date" placeholder="Tanggal Berangkat" style="width:335px;" required>
+                            <input name="tgl_jadwal" id="tgl_jadwal_edit" class="form-control" type="date" placeholder="Tanggal Jadwal" style="width:335px;" required>
                         </div>
                     </div>
 					
@@ -259,11 +259,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 '<td>'+data[i].id_tiket+'</td>'+
                                 '<td>'+data[i].asal+'</td>'+
                                 '<td>'+data[i].tujuan+'</td>'+
-                                '<td>'+data[i].tgl_brngkt+'</td>'+
+                                '<td>'+data[i].tgl_jadwal+'</td>'+
                                 '<td>'+data[i].jm_brngkt+'</td>'+
                                 '<td>'+data[i].seat+'</td>'+
                                 '<td>'+data[i].harga+'</td>'+
-                                '<td style="width: 16.66%;">' + '<span><a href="javascript:;" data-id="'+data[i].id_tiket+'" data-asal="'+data[i].asal+'" data-tujuan="'+data[i].tujuan+'" data-tgl_brngkt="'+data[i].tgl_brngkt+'" data-jm_brngkt="'+data[i].jm_brngkt+'" data-seat="'+data[i].seat+'"data-harga="'+data[i].harga+'" data-toggle="modal" data-target="#ModalaEdit" class="btn btn-primary">Edit</a><button style="margin-left: 5px;" data-id="'+data[i].id_tiket+'" class="btn btn-danger btn_hapus">Hapus</button></span>'  + '</td>'
+                                '<td style="width: 16.66%;">' + '<span><a href="javascript:;" data-id="'+data[i].id_tiket+'" data-asal="'+data[i].asal+'" data-tujuan="'+data[i].tujuan+'" data-tgl_jadwal="'+data[i].tgl_jadwal+'" data-jm_brngkt="'+data[i].jm_brngkt+'" data-seat="'+data[i].seat+'"data-harga="'+data[i].harga+'" data-toggle="modal" data-target="#ModalaEdit" class="btn btn-primary">Edit</a><button style="margin-left: 5px;" data-id="'+data[i].id_tiket+'" class="btn btn-danger btn_hapus">Hapus</button></span>'  + '</td>'
                                 '</tr>';
                     }
                     $('#show_data').html(html);
@@ -277,7 +277,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var asal=$('#asal').val();
             var tujuan=$('#tujuan').val();
             var harga=$('#harga').val();
-            var tgl_brngkt=$('#tgl_brngkt').val();
+            var tgl_jadwal=$('#tgl_jadwal').val();
             var jm_brngkt=$('#jm_brngkt').val();
             var seat=$('#seat').val();
 			if(asal == ""){
@@ -288,9 +288,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				alert( "Mohon isi tujuan lokasi keberangkatan!" );
 				document.myForm.tujuan.focus() ;
 				return false;
-			} else if(tgl_brngkt == ""){
-				alert( "Mohon isi tanggal keberangkatan!" );
-				document.myForm.tgl_brngkt.focus() ;
+			} else if(tgl_jadwal == ""){
+				alert( "Mohon isi tanggal jadwal!" );
+				document.myForm.tgl_jadwal.focus() ;
 				return false;
 			} else if(jm_brngkt == ""){
 				alert( "Mohon isi jam keberangkatan!" );
@@ -309,13 +309,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 type : "POST",
                 url  : "<?php echo base_url('index.php/tiket/simpan_tiket')?>",
                 dataType : "JSON",
-                data : {asal:asal , tujuan:tujuan, tgl_brngkt:tgl_brngkt, jm_brngkt:jm_brngkt, seat:seat, harga:harga },
+                data : {asal:asal , tujuan:tujuan, tgl_jadwal:tgl_jadwal, jm_brngkt:jm_brngkt, seat:seat, harga:harga },
                 success: function(data){
                     $('[name="asal"]').val("");
                     $('[name="tujuan"]').val("");
-                    $('[name="tgl_brngkt"]').val("");
+                    $('[name="tgl_jadwal"]').val("");
                     $('[name="jm_brngkt"]').val("");
-                    $('[name="tgl_brngkt"]').val("");
                     $('[name="harga"]').val("");
                     $('[name="seat"]').val("");
                     $('#ModalAdd').modal('hide');
@@ -349,7 +348,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             var idtiket=$('#idtiket_edit').val();
             var asal=$('#asal_edit').val();
             var tujuan=$('#tujuan_edit').val();
-            var tgl_brngkt=$('#tgl_brngkt_edit').val();
+            var tgl_jadwal=$('#tgl_jadwal_edit').val();
             var jm_brngkt=$('#jm_brngkt_edit').val();
             var seat=$('#seat_edit').val();
             var harga=$('#harga_edit').val();
@@ -357,13 +356,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 type : "POST",
                 url  : "<?php echo base_url('index.php/tiket/update_tiket')?>",
                 dataType : "JSON",
-                data : {idtiket:idtiket , asal:asal, tujuan:tujuan, tgl_brngkt:tgl_brngkt, jm_brngkt:jm_brngkt, seat:seat, harga:harga},
+                data : {idtiket:idtiket , asal:asal, tujuan:tujuan, tgl_jadwal:tgl_jadwal, jm_brngkt:jm_brngkt, seat:seat, harga:harga},
                 success: function(data){
                     $('[name="asal_edit"]').val("");
                     $('[name="tujuan_edit"]').val("");
-                    $('[name="tgl_brngkt_edit"]').val("");
+                    $('[name="tgl_jadwal_edit"]').val("");
                     $('[name="jm_brngkt_edit"]').val("");
-                    $('[name="tgl_brngkt_edit"]').val("");
                     $('[name="harga_edit"]').val("");
                     $('[name="seat_edit"]').val("");
                     $('#ModalaEdit').modal('hide');
@@ -386,7 +384,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              modal.find('#idtiket_edit').attr("value",div.data('id'));
              modal.find('#asal_edit').attr("value",div.data('asal'));
              modal.find('#tujuan_edit').attr("value",div.data('tujuan'));
-             modal.find('#tgl_brngkt_edit').attr("value",div.data('tgl_brngkt'));
+             modal.find('#tgl_jadwal_edit').attr("value",div.data('tgl_jadwal'));
              modal.find('#jm_brngkt_edit').attr("value",div.data('jm_brngkt'));
              modal.find('#seat_edit').attr("value",div.data('seat'));
              modal.find('#harga_edit').attr("value",div.data('harga'));

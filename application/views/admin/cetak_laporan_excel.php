@@ -97,7 +97,7 @@ header("Content-Disposition: attachment; filename=Laporan Jadwal Penjualan Tiket
 									<th>Id</th>
 									<th>Asal</th>
 									<th>Tujuan</th>
-									<th>Tanggal Berangkat</th>
+									<th>Tanggal Jadwal</th>
 									<th>Jam Berangkat</th>
 									<th>Seat</th>
 									<th>Harga Satuan</th>
@@ -111,7 +111,7 @@ header("Content-Disposition: attachment; filename=Laporan Jadwal Penjualan Tiket
 						<td class="align-middle"><?php echo $l->id_tiket ?></td>
 						<td class="align-middle"><?php echo $l->asal ?></td>
 						<td class="align-middle"><?php echo $l->tujuan ?></td>
-						<td class="align-middle"><?php echo $l->tgl_brngkt ?></td>
+						<td class="align-middle"><?php echo $l->tgl_jadwal ?></td>
 						<td class="align-middle"><?php echo $l->jm_brngkt ?></td>
 						<td class="align-middle"><?php echo $l->seat ?></td>
 						<td class="align-middle"><?php echo $l->harga ?></td>

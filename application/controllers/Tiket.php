@@ -28,11 +28,11 @@ class Tiket extends CI_Controller {
         $id_tiket=NULL;
         $asal=$this->input->post('asal');
         $tujuan=$this->input->post('tujuan');
-        $tgl_brngkt=$this->input->post('tgl_brngkt');
+        $tgl_jadwal=$this->input->post('tgl_jadwal');
         $jm_brngkt=$this->input->post('jm_brngkt');
         $seat=$this->input->post('seat');
         $harga=$this->input->post('harga');
-        $data=$this->m_tiket->simpan_tiket($id_tiket,$asal,$tujuan,$tgl_brngkt,$jm_brngkt,$seat,$harga);
+        $data=$this->m_tiket->simpan_tiket($id_tiket,$asal,$tujuan,$tgl_jadwal,$jm_brngkt,$seat,$harga);
         echo json_encode($data);
     }
 	
@@ -58,11 +58,11 @@ class Tiket extends CI_Controller {
         $idtiket=$this->input->post('idtiket');
         $asal=$this->input->post('asal');
         $tujuan=$this->input->post('tujuan');
-        $tgl_brngkt=$this->input->post('tgl_brngkt');
+        $tgl_jadwal=$this->input->post('tgl_jadwal');
         $jm_brngkt=$this->input->post('jm_brngkt');
         $seat=$this->input->post('seat');
         $harga=$this->input->post('harga');
-        $data=$this->m_tiket->update_tiket($idtiket,$asal,$tujuan,$tgl_brngkt,$jm_brngkt,$seat,$harga);
+        $data=$this->m_tiket->update_tiket($idtiket,$asal,$tujuan,$tgl_jadwal,$jm_brngkt,$seat,$harga);
         echo json_encode($data);
     }
 }

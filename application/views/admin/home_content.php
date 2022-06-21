@@ -32,6 +32,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="line"></div>
 
             <h2>Waktu Keberangkatan</h2>
-            <p>Tanggal dan Jam Keberangkatan</p>
+            <p>Tanggal Jadwal dan Jam Keberangkatan</p>
         </div>
     </div>

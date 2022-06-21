@@ -12,8 +12,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="assets/css/admin/home_admin.css">
 
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
@@ -33,66 +31,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             <ul class="list-unstyled components">
 				<li>
-                    <a href="#" style="font-size: 0.85em;">
+                    <a href="<?php echo base_url().'Admin'?>" style="font-size: 0.85em;">
                         <i class="fas fa-home"></i>
                         Beranda
                     </a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="font-size: 0.85em;">
+				<li>
+                    <a href="<?php echo base_url().'tiket'?>" style="font-size: 0.85em;">
                         <i class="fas fa-copy"></i>
                         Jadwal Penjualan Tiket
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Data Tiket</a>
-                        </li>
-                        <li>
-                            <a href="#">Input Tiket</a>
-                        </li>
-                        <li>
-                            <a href="#">Laporan Tiket</a>
-                        </li>
-                    </ul>
                 </li>
             </ul>
 
             <ul class="list-unstyled">
-				<button type="button" class="btn btn-success btn-block"><a href="<?php echo base_url().'login/logout'?>" class="logout">Logout</a></button>
+				<button type="button" class="btn btn-success btn-block"><a href="<?php echo base_url().'admin_login/logout'?>" class="logout">Logout</a></button>
 			</ul>
         </nav>
-
-        <!-- Page Content  -->
+		<!-- Page Content  -->
         <div id="content">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
                         <span>Menu</span>
                     </button>
+					<h1>Website Admin Perum DAMRI</h1>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
                 </div>
             </nav>
-
-            <h2>Dashboard Jadwal Penjualan Tiket</h2>
-            <p>Disini untuk statistik jadwal penjualan tiket</p>
-            <p>Yang berisi statistik jadwal penjualan tiket</p>
-
-            <div class="line"></div>
-
-            <h2>Lokasi Keberangkatan</h2>
-            <p>Asal dan Tujuan Keberangkatan</p>
-			
-			<div class="line"></div>
-
-            <h2>Waktu Keberangkatan</h2>
-            <p>Tanggal dan Jam Keberangkatan</p>
-        </div>
-    </div>
+        
 	
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

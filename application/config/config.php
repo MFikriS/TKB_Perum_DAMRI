@@ -36,7 +36,6 @@ $config['base_url'] = 'http://localhost/ticketingdamri';
 |
 */
 $config['index_page'] = '';
-
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL

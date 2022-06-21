@@ -8,6 +8,13 @@ class Admin extends CI_Controller {
 		$this->load->helper('url');
 	}
 	public function index() { 
-		$this->load->view('admin/home_admin');
+		if($this->session->userdata('status') != "admin_login"){
+			echo "<script>
+			alert('Anda belum login, silakan login terlebih dahulu!');
+			window.location.href='../ticketingdamri/Ticketing';
+			</script>";
+		}
+		$this->load->view('templates/admin/sidebar');
+		$this->load->view('admin/home_content');
 	}
 }

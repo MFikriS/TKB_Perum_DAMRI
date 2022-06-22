@@ -263,7 +263,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 '<td>'+data[i].jm_brngkt+'</td>'+
                                 '<td>'+data[i].seat+'</td>'+
                                 '<td>'+data[i].harga+'</td>'+
-                                '<td style="width: 16.66%;">' + '<span><a href="javascript:;" data-id="'+data[i].id_tiket+'" data-asal="'+data[i].asal+'" data-tujuan="'+data[i].tujuan+'" data-tgl_jadwal="'+data[i].tgl_jadwal+'" data-jm_brngkt="'+data[i].jm_brngkt+'" data-seat="'+data[i].seat+'"data-harga="'+data[i].harga+'" data-toggle="modal" data-target="#ModalaEdit" class="btn btn-primary">Edit</a><button style="margin-left: 5px;" data-id="'+data[i].id_tiket+'" class="btn btn-danger btn_hapus">Hapus</button></span>'  + '</td>'
+                                '<td>' + '<button style="margin-left: 0px;" data-id="'+data[i].id_tiket+'" class="btn btn-danger btn_hapus btn-sm">Hapus</button><span><a href="javascript:;" data-id="'+data[i].id_tiket+'" data-asal="'+data[i].asal+'" data-tujuan="'+data[i].tujuan+'" data-tgl_jadwal="'+data[i].tgl_jadwal+'" data-jm_brngkt="'+data[i].jm_brngkt+'" data-seat="'+data[i].seat+'"data-harga="'+data[i].harga+'" data-toggle="modal" data-target="#ModalaEdit" class="btn btn-primary btn-block">Edit</a></span>'  + '</td>'
                                 '</tr>';
                     }
                     $('#show_data').html(html);
